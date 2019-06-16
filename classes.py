@@ -17,7 +17,7 @@ class Table(object):
             if player not in self.players:
                 self.players.append(player)
             else:
-                print("Player {} already at table".format(player.username))
+                print("Player {} already at table".format(str(player))
         else:
             print("This table is full.")
             #raise FullTable
@@ -25,7 +25,7 @@ class Table(object):
         if player in self.players:
             self.players.remove(player)
         else:
-            print("Player not at table.")
+            print("Player {} not at table".format(str(player))
     def remaining_seats(self):
         return self.seats - len(self.players)
     def print_players(self):
